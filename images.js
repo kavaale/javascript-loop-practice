@@ -9,6 +9,7 @@ $(document).ready(function () {
 
         // Get the number from the box
         var num = parseInt($("#numPics").val());
+        var i = 0;
 
         // Print the desired number of images for each loop
         $("#while-num").text(num + 1);
@@ -22,10 +23,10 @@ $(document).ready(function () {
          The body of the loop should contain the statement:
          addImageToDiv("#while-loop");
         */
-
-
-
-
+        while(num + 1 > i) {
+            addImageToDiv("#while-loop");
+            i++;
+        }
 
         /*
          Create a do-while loop that runs "num - 1" times.
@@ -33,10 +34,12 @@ $(document).ready(function () {
          The body of the loop should contain the statement:
          addImageToDiv("#do-while-loop");
         */
-
-
-
-
+        i = 0;
+        do {
+            addImageToDiv("#do-while-loop");
+            i++;
+        }
+        while (num - 1 > i);
 
         /*
          Create a for loop that runs exactly "num" times.
@@ -44,6 +47,10 @@ $(document).ready(function () {
          The body of the loop should contain the statement:
          addImageToDiv("#for-loop");
         */
+
+        for(var x = 0; num > x; x++) {
+            addImageToDiv("#for-loop");
+        }
 
 
 
